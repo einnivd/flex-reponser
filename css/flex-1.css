@@ -1,0 +1,60 @@
+@import url("reset.css");
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: thistle;
+}
+.card-list{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: tomato;
+}
+.card-list li{
+    width: calc((100% - 70px)/ 8);
+    padding: 40px 0;
+    background-color: steelblue;
+}
+/* 반응형 */
+/* @media (max-width:100%){
+    .container{
+        width: 90%;
+    }
+    .card-list li{
+        width: calc(100% / 8);
+    }
+} */
+@media (max-width:768px){
+    .container{
+        width: 90%;
+    }
+    .card-list li{
+        width: calc((100% - 50px) / 6);
+    /* gap이 10px이므로
+    한 줄에 list가 6개일 때 gap이 총 5개 생기니까
+    10px × 5개 = 50px을 뺀다. */
+    }
+
+
+    
+}
+@media (max-width: 480px){
+    .card-list li{
+        width: calc((100% - 20px) / 3);
+    }
+}
+@media (max-width: 390px){
+    .card-list li{
+        width: 100%;
+        /* calc((100% - 0) / 1) 이므로 그냥 100%로 적는다. */
+    }
+}
+/* @media (max-width: 250px){
+    .card-list li{
+        width: 100%;
+    }
+} */
